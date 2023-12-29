@@ -1,0 +1,38 @@
+﻿@model ArcticBook.Models.Domain.Manga
+@{
+}
+
+<form class="w-40" asp-action="AddManga" method="post" enctype="multipart/form-data">
+    <h2 class="pb-10">Add Manga</h2>
+    
+    
+    <div class="input-container">
+        <label asp-for="ImageFile" class="w-40">Image page of manga</label>
+        <input type="file" asp-for="ImageFile">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="ImageFile"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="Books" class="w-40">Genre</label>
+        <select asp-items="Model.BookListForManga" class="input" asp-for="Books" multiple>
+            <option value="">--select--</option>
+        </select>
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Books"> </span>
+    </div>
+
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert mb-1">
+            @TempData["msg"]
+        </div>
+    }
+
+    <div class="input-container">
+        <button class="btn btn-default" type="submit">Save</button>
+    </div>
+</form>

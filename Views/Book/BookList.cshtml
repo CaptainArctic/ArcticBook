@@ -1,0 +1,37 @@
+﻿@model ArcticBook.Models.DTO.BookListVm
+@{
+}
+
+<div class="tbl-container">
+    <h2>Books</h2>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Release year</th>
+            <th>Image</th>
+            <th>Author</th>
+            <th>Action</th>
+        </tr> 
+        @foreach (var item in Model.BookList)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.GenreNames</td>
+                <td>@item.ReleaseYear</td>
+                <td><img style="height:60px;width:80px" src="/Uploads/@item.BookImage" /></td>
+
+                <td>@item.Author</td>
+                <td>
+                    <a href="/Book/Edit?id=@item.Id" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                    <a onclick="return window.confirm('Are you sure?')" href="/Book/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="input-container">
+        <a href="/Book/Add" class="btn btn-sec">Back</a>
+    </div>
+</div>

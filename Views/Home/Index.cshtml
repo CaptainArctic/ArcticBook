@@ -1,0 +1,41 @@
+﻿@model ArcticBook.Models.DTO.BookListVm
+@{
+    Layout = "_Layout";
+}
+<section class="search-bar">
+    <form method="get" asp-action="Index">
+        <input type="text" name="term" placeholder="search here">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</section>
+<section class="books">
+    @foreach(var book in Model.BookList)
+    { 
+    <div class="book-card" onclick="window.location.href='/Home/BookDetail?bookId=@book.Id'">
+        <div class="book-image">
+                <img style="height:200px;width:200px" src="/Uploads/@book.BookImage">
+        </div>
+        <div class="book-info">
+            <h4>@book.Title</h4>
+            <h4>@book.GenreNames</h4>
+            <h4>Author: @book.Author</h4>
+        </div>
+    </div>
+
+    }
+</section>
+
+<div class="pagination">
+    @for(int i=1;i<=Model.TotalPages;i++)
+    {
+        if (i == Model.CurrentPage)
+        {
+            <a href="/Home/Index?currentPage=@i&term=@Model.Term" class="active">@i</a>
+        }
+        else
+        {
+            <a href="/Home/Index?currentPage=@i&term=@Model.Term">@i</a>
+        }
+    }
+    
+</div>

@@ -1,0 +1,45 @@
+﻿@model ArcticBook.Models.Domain.Book
+@{
+}
+
+<div class="book-detail w-80 m-auto">
+
+    @*<div class="img-container">
+
+
+        <img alt="image" src="/Uploads/@Model.BookImage">
+    </div>*@
+
+    <div class="detail-container">
+        <h3>@Model.Title</h3>
+        @*<h4>@Model.GenreNames</h4>
+        <h4>@Model.ReleaseYear</h4>
+        <h4>Author: @Model.Author</h4>*@
+        @*<h4>@Model.MangaNames</h4>*@
+
+       
+    <a href="/Home/Index" class="btn btn-default">Back</a>
+    </div>
+
+    @foreach (var imagePath in @Model.MangaImages)
+    {
+        <img alt="image1" src="/Uploads/@imagePath">
+    }
+
+
+</div>
+
+<div class="pagination">
+    @for (int i = 1; i <= Model.TotalPages; i++)
+    {
+        if (i == Model.CurrentPage)
+        {
+            <a href="/Home/BookDetail?bookId=@Model.Id&currentPage=@i" class="active">@i</a>
+        }
+        else
+        {
+            <a href="/Home/BookDetail?bookId=@Model.Id&currentPage=@i">@i</a>
+        }
+    }
+</div>
+

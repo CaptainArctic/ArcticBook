@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ArcticBook.Models.Domain.Manga>
+@{
+}
+
+@*<section class="search-bar">
+    <form method="get" asp-action="MangaList">
+        <input type="text" name="term" placeholder="search here">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</section>*@
+
+<div class="tbl-container">
+    <h2>Mangas</h2>
+
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img style="height:60px;width:80px" src="/Uploads/@item.MangaImage" /></td>
+                <td>@item.MangaImage</td>
+                <td>
+                    <a onclick="return window.confirm('Are you sure?')" href="/Home/DeleteManga?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="input-container">
+        <a href="/Genre/Add" class="btn btn-sec">Back</a>
+    </div>
+</div>
