@@ -20,8 +20,8 @@ namespace ArcticBook.Controllers
             {
                 Email = "admin@gmail.com",
                 Username = "admin",
-                Password = "Admin@123",
-                PasswordConfirm = "Admin@123",
+                Password = "", //set your password here
+                PasswordConfirm = "", //set your password here
                 Role = "Admin"
             };
 
