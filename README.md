@@ -1,6 +1,6 @@
-http://arcticmanga.somee.com/
-
 #  Проект «ArcticBook»
+
+Проект доступен по адресу: http://arcticmanga.somee.com/
 
 ## Описание проекта
 
@@ -8,7 +8,11 @@ http://arcticmanga.somee.com/
 
 **Что могут делать пользователи:**
 - Просматривать страницы манги.
+  ![image](https://github.com/CaptainArctic/ArcticBook/assets/60844797/66c92f16-af3f-497e-85d4-74f20821d9cf)
+
 - Использовать поиск по названию для быстрого нахождения необходимого тайтла.
+  ![image](https://github.com/CaptainArctic/ArcticBook/assets/60844797/d3f82eb7-dbd1-4485-ad80-71a12ea94658)
+
 
 **Что может делать администратор:**
 Администратор обладает всеми правами авторизованного пользователя. Плюс к этому он может:
@@ -16,6 +20,9 @@ http://arcticmanga.somee.com/
 - Добавлять, удалять, редактировать жанры.
 - Добавлять, удалять, редактировать литературные произведения.
 - Добавлять, удалять страницы манги.
+
+  ![image](https://github.com/CaptainArctic/ArcticBook/assets/60844797/7d60610a-b2d6-4e0b-b928-af363daca14b)
+
 
 ## Инструкция по запуску проекта локально
 
@@ -33,5 +40,3 @@ git clone git@github.com:CaptainArctic/ArcticBook.git
 
 ## Автор
 Павлов Кирилл (https://github.com/CaptainArctic)
-
-Проект доступен по адресу: http://arcticmanga.somee.com/
