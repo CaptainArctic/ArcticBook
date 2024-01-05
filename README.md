@@ -38,5 +38,9 @@ git clone git@github.com:CaptainArctic/ArcticBook.git
 - EntityFrameworkCore 6.0.10
 - MSQL Server 2019 v19.0.2
 
+## TODO
+- Регистрация и авторизация пользователей сайта.
+- Возможность пользователями оставлять комментарии под каждой страницей одного произведения.
+
 ## Автор
 Павлов Кирилл (https://github.com/CaptainArctic)
